@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SignalLab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9f23f4d8d6021e6556fe6a3d2c88efc23e6e72a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SignalLab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SignalLab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
