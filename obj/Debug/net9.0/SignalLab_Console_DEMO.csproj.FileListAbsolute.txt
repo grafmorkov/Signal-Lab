@@ -1,0 +1,4 @@
+/games/Csharp/Projects/SignalLab_Console_DEMO/obj/Debug/net9.0/SignalLab_Console_DEMO.GeneratedMSBuildEditorConfig.editorconfig
+/games/Csharp/Projects/SignalLab_Console_DEMO/obj/Debug/net9.0/SignalLab_Console_DEMO.AssemblyInfoInputs.cache
+/games/Csharp/Projects/SignalLab_Console_DEMO/obj/Debug/net9.0/SignalLab_Console_DEMO.AssemblyInfo.cs
+/games/Csharp/Projects/SignalLab_Console_DEMO/obj/Debug/net9.0/SignalLab_Console_DEMO.csproj.CoreCompileInputs.cache

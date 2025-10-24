@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iWA/poeyiWs=",
+  "success": true,
+  "projectFilePath": "/home/watt/CsharpProjects/SignalLab/SignalLab.csproj",
+  "expectedPackageFiles": [
+    "/home/watt/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.9/microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

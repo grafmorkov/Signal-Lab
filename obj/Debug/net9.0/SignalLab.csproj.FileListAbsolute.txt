@@ -1,0 +1,10 @@
+/games/Csharp/Projects/SignalLab/bin/Debug/net9.0/SignalLab
+/games/Csharp/Projects/SignalLab/bin/Debug/net9.0/SignalLab.dll
+/games/Csharp/Projects/SignalLab/bin/Debug/net9.0/SignalLab.pdb
+/games/Csharp/Projects/SignalLab/obj/Debug/net9.0/SignalLab.GeneratedMSBuildEditorConfig.editorconfig
+/games/Csharp/Projects/SignalLab/obj/Debug/net9.0/SignalLab.AssemblyInfoInputs.cache
+/games/Csharp/Projects/SignalLab/obj/Debug/net9.0/SignalLab.AssemblyInfo.cs
+/games/Csharp/Projects/SignalLab/obj/Debug/net9.0/SignalLab.csproj.CoreCompileInputs.cache
+/games/Csharp/Projects/SignalLab/obj/Debug/net9.0/SignalLab.dll
+/games/Csharp/Projects/SignalLab/obj/Debug/net9.0/refint/SignalLab.dll
+/games/Csharp/Projects/SignalLab/obj/Debug/net9.0/SignalLab.pdb
