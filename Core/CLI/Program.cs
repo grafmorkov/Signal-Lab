@@ -7,7 +7,7 @@ namespace SignalLab.Core.CLI;
     {
         public static void Main(string[] args)
         {
-            ConsoleLogger logger = new ConsoleLogger();
+            ILogger logger = new ConsoleLogger();
             try
             {
                 Console.ForegroundColor = ConsoleColor.Green;
