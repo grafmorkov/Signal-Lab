@@ -7,6 +7,11 @@ public static class JsonExporter
 {
     public static void ExportSignals(string path, List<Vector2> signals)
     {
+        if (string.IsNullOrEmpty(path))
+        {
+            path = Path.Combine(AppContext.BaseDirectory, "signals.json");
+        }
+        
         var exportData = new { signals };
 
         var jsonOptions = new JsonSerializerOptions
