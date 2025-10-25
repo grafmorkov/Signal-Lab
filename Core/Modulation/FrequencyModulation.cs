@@ -6,7 +6,7 @@ namespace SignalLab.Core.Modulation;
 
 public class FrequencyModulation : ISignalModulation
 {
-    public Signal Modulate(SignalData signalData, TransiverProperties properties)
+    public Signal Modulate(SignalData signalData, TransceiverProperties properties)
     {
         try
         {

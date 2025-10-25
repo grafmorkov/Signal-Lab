@@ -8,3 +8,4 @@
 /games/Csharp/Projects/SignalLab/obj/Debug/net9.0/SignalLab.dll
 /games/Csharp/Projects/SignalLab/obj/Debug/net9.0/refint/SignalLab.dll
 /games/Csharp/Projects/SignalLab/obj/Debug/net9.0/SignalLab.pdb
+/games/Csharp/Projects/SignalLab/obj/Debug/net9.0/SignalLab.sourcelink.json

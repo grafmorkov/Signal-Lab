@@ -5,7 +5,7 @@ using SignalLab.Core.Logging;
 namespace SignalLab.Core.Modulation;
 public class AmplitudeModulation : ISignalModulation
 {
-    public Signal Modulate(SignalData signalData, TransiverProperties properties)
+    public Signal Modulate(SignalData signalData, TransceiverProperties properties)
     {
         ConsoleLogger logger =  new ConsoleLogger();
         try

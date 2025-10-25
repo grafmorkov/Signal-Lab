@@ -40,7 +40,7 @@ public static class GenerateSignalCommand
             consoleLogger.Log($"Invalid modulation type entered. Default type applied: {nameof(FrequencyModulation)}", LogType.Warning);
         }
 
-        TransiverProperties properties = new TransiverProperties(kf, sampleRate, information, minTimeStep);
+        TransceiverProperties properties = new TransceiverProperties(kf, sampleRate, information, minTimeStep);
         Signal signal = modulator.Modulate(data, properties);
         
         foreach (var vector in signal.Coordinates)
@@ -51,6 +51,11 @@ public static class GenerateSignalCommand
         consoleLogger.Log("Success! The signal has been modulated successfully.");
 
         string choice = ReadValue("Do you want to write all the signal data to the .json? (Y,n): ", "n");
+        if (choice.Equals("y", StringComparison.OrdinalIgnoreCase))
+        {
+            string path = ReadValue("Enter the path to a JSON file: ", "signals.json");
+            JsonExporter.ExportSignals(path, signal.Coordinates);
+        }
     }
 
     private static T ReadValue<T>(string prompt, T defaultValue)
