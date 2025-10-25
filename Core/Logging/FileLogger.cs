@@ -1,13 +1,20 @@
+using System;
 using System.IO;
 
 namespace SignalLab.Core.Logging;
 
 public class FileLogger : ILogger
 {
-    private string _path = "log.txt";
+    private readonly string _path;
+
+    public FileLogger()
+    {
+        _path = Path.Combine(AppContext.BaseDirectory, "log.txt");
+    }
+
     public void Log(string message, LogType type = LogType.Info)
     {
-        if (message != string.Empty)
+        if (!string.IsNullOrEmpty(message))
         {
             var date = DateTime.Now;
             string resultMessage = $"[{type.ToString().ToUpper()}][{date:HH:mm:ss}]: {message}";
