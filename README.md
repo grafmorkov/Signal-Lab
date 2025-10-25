@@ -23,90 +23,41 @@ where
 
 ## Example usage
 
-```csharp
-using SignalLab.Core.Modulation;
-using SignalLab.Core.Data;
-using SignalLab.Core.Logging;
+```bash
+Welcome to the SignalLab Core!
+0 - Generate a signal
+1 - Exit
+0
+Enter the signal amplitude: 2 
 
-namespace SignalLab.Core.CLI.Commands;
+Enter the signal frequency: 192
 
-public static class GenerateSignalCommand
-{
-    public static void GenerateSignal()
-    {
-        ConsoleLogger logger = new ConsoleLogger();
-        SignalData data = new SignalData();
+Enter the initial signal phase: 0
 
-        Console.Write("Enter the signal amplitude: ");
-        data.Amplitude = double.Parse(Console.ReadLine() ?? "1", System.Globalization.CultureInfo.InvariantCulture);
-        Console.WriteLine();
+Enter the signal duration (in seconds): 10
 
-        Console.Write("Enter the signal frequency: ");
-        data.Frequency = double.Parse(Console.ReadLine() ?? "44100", System.Globalization.CultureInfo.InvariantCulture);
-        Console.WriteLine();
+Select modulation type (0 - FM, 1 - AM): 0
 
-        Console.Write("Enter the initial signal phase: ");
-        data.Phase = double.Parse(Console.ReadLine() ?? "0", System.Globalization.CultureInfo.InvariantCulture);
-        Console.WriteLine();
+Enter transceiver settings:
+Enter frequency sensitivity (kf): 10
 
-        Console.Write("Enter the signal duration (in seconds): ");
-        data.Time = double.Parse(Console.ReadLine() ?? "0.1", System.Globalization.CultureInfo.InvariantCulture);
-        Console.WriteLine();
+Enter sampling rate: 192
 
-        Console.WriteLine("Select modulation type:\n0 - FM (Frequency Modulation)\n1 - AM (Amplitude Modulation)");
-        int modType = int.Parse(Console.ReadLine() ?? "0", System.Globalization.CultureInfo.InvariantCulture);
-        Console.WriteLine();
+Enter minimum time step (affects accuracy and performance): 0.1
 
-        Console.WriteLine("Enter transceiver settings:");
+Enter the information (text) you want to convert into a signal: Demo
 
-        Console.Write("Enter frequency sensitivity (kf): ");
-        double kf = double.Parse(Console.ReadLine() ?? "100", System.Globalization.CultureInfo.InvariantCulture);
-        Console.WriteLine();
+[INFO][14:03:36]: Success! The signal has been modulated successfully.
+Do you want to write all the signal data to the .json? (Y,n): Y
 
-        Console.Write("Enter sampling rate: ");
-        double sampleRate = double.Parse(Console.ReadLine() ?? "44100", System.Globalization.CultureInfo.InvariantCulture);
-        Console.WriteLine();
+Enter the path to a JSON file: /home/watt/signals.json
 
-        Console.Write("Enter minimum time step (NOTE: affects simulation accuracy and performance): ");
-        double minTimeStep = double.Parse(Console.ReadLine() ?? "0.01", System.Globalization.CultureInfo.InvariantCulture);
-        Console.WriteLine();
 
-        Console.Write("Enter the information (text) you want to convert into a signal: ");
-        string information = Console.ReadLine() ?? string.Empty;
-        Console.WriteLine();
-
-        ISignalModulation modulator;
-        if (modType == 0)
-        {
-            modulator = new FrequencyModulation();
-        }
-        else if (modType == 1)
-        {
-            modulator = new AmplitudeModulation();
-        }
-        else
-        {
-            modulator = new FrequencyModulation();
-            logger.Log($"Invalid modulation type entered.\nDefault type applied: {nameof(FrequencyModulation)}", LogType.Warning);
-        }
-
-        TransiverProperties properties = new TransiverProperties(kf, sampleRate, information, minTimeStep);
-        Signal signal = modulator.Modulate(data, properties);
-
-        logger.Log("Success! The signal has been modulated successfully.");
-
-        foreach (var vector in signal.Coordinates)
-        {
-            Console.WriteLine($"{signal.Coordinates.IndexOf(vector)}. Vector: {vector.X:F3}, {vector.Y:F3}");
-        }
-    }
-}
+Process finished with exit code 0.
 ```
 ## Future Plans
 
 WAV Converter — export generated signals to .wav format
-
-JSON Configuration — save and load modulation parameters
 
 Digital Modulation Support — add BPSK, QPSK, FSK, and others
 
